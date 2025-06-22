@@ -85,19 +85,32 @@ const sections: NinjaSection[] = [
           {
             title: "Microsoft DAX Guide",
             href: "https://learn.microsoft.com/en-us/dax/",
-            description: "Oficjalna dokumentacja Microsoft dla języka DAX.",
+            description: "Oficjalna dokumentacja Microsoft z opisem funkcji DAX, przykładami i wskazówkami użycia.",
             icon: <ExternalLink />,
           },
           {
             title: "DAX Formatter by SQLBI",
             href: "https://www.daxformatter.com/",
-            description: "Formatowanie kodu DAX online od SQLBI.",
+            description: "Formatuje kod DAX zgodnie z najlepszymi praktykami.",
             icon: <ExternalLink />,
           },
           {
             title: "DAX Patterns",
             href: "https://www.daxpatterns.com/",
-            description: "Wzorce zapytań DAX i modelowania od SQLBI.",
+            description: "Zbiór gotowych wzorców DAX do typowych problemów analitycznych.",
+            icon: <ExternalLink />,
+          },
+          {
+            title: "DAX.do",
+            href: "https://dax.do/",
+            description: "Interaktywny edytor DAX – pisz, testuj i udostępniaj kod bezpośrednio w przeglądarce.",
+            icon: <ExternalLink />,
+          },
+          {
+            title: "DAX Optimizer",
+            href: "https://www.daxoptimizer.com/",
+            description:
+              "Zautomatyzowana analiza modeli DAX – wykrywa wąskie gardła i wskazuje priorytety optymalizacji.",
             icon: <ExternalLink />,
           },
         ],
@@ -110,27 +123,28 @@ const sections: NinjaSection[] = [
             title: "Power BI Blog",
             href: "https://powerbi.microsoft.com/en-us/blog/",
             description:
-              "Oficjalny blog Power BI z nowościami i aktualizacjami.",
+                  "Oficjalny blog Power BI z newsami, aktualizacjami funkcji.",
             icon: <ExternalLink />,
           },
           {
             title: "Power BI Community",
             href: "https://community.powerbi.com/",
-            description: "Forum społeczności Power BI, pomoc i inspiracje.",
+            description:
+              "Aktywne forum społeczności – pytania, inspiracje i rozwiązania od użytkowników.",
             icon: <ExternalLink />,
           },
           {
             title: "PowerBI.Tips",
             href: "https://powerbi.tips",
             description:
-              "Tutoriale, szablony, motywy kolorystyczne i narzędzia do pracy z Power BI.",
+              "Generator motywów i layoutów, tutoriale, helpery wizualne i narzędzia przyspieszające raportowanie.",
             icon: <ExternalLink />,
           },
           {
             title: "PowerBI Weekly",
             href: "https://powerbiweekly.info/",
             description:
-              "Cotygodniowa porcja nowości, poradników i ciekawych narzędzi ze świata Power BI.",
+               "Cotygodniowy newsletter z wyselekcjonowanymi nowościami, poradami i narzędziami ze świata Power BI.",
             icon: <ExternalLink />,
           },
         ],
@@ -156,7 +170,7 @@ const sections: NinjaSection[] = [
             title: "Bravo for Power BI",
             href: "https://www.sqlbi.com/tools/bravo-for-power-bi",
             description:
-              "Ułatwia formatowanie kodu DAX, tworzenie miar Time Intelligence i eksport danych.",
+              "Otwarte narzędzie do analizy modelu, czyszczenia miar DAX i eksportu danych.", 
             icon: <Component className="w-5 h-5" />,
           },
           {
@@ -165,6 +179,13 @@ const sections: NinjaSection[] = [
             description:
               "Narzędzie do pisania, wykonywania i analizowania zapytań DAX.",
             icon: <Component className="w-5 h-5" />,
+          },
+          {
+            title: "ALM Toolkit",
+            href: "https://alm-toolkit.com/",
+            description:
+              "Porównuje i synchronizuje modele Tabular – przydatny przy wersjonowaniu miar i zmianach w modelu.",
+            icon: <ExternalLink />,
           },
         ],
       },
@@ -233,23 +254,37 @@ const sections: NinjaSection[] = [
               "Szybkie generowanie pasujących kolorów, do eksportu jako motyw.",
             icon: <Palette className="w-5 h-5" />,
           },
+          {
+            title: "PowerBI.Tips Theme Generator",
+            href: "https://themes.powerbi.tips/",
+            description:
+              "Dedykowany generator motywów do Power BI – kolory, typografia, styl wizualizacji.",
+            icon: <Palette className="w-5 h-5" />,
+          },
         ],
       },
       {
-        name: "Wykresy",
+        name: "Encyklopedia wykresów",
         description: "", // Description removed
         links: [
           {
             title: "The Data Visualisation Catalogue",
             href: "https://datavizcatalogue.com/",
-            description: "Katalog typów wykresów z opisami i zastosowaniami.",
+            description: "Katalog typów wykresów z opisami, przykładami i zastosowaniami.",
             icon: <LineChart className="w-5 h-5" />,
           },
           {
             title: "From Data to Viz",
             href: "https://www.data-to-viz.com/",
             description:
-              "Poradnik, jak wybrać najlepszy wykres dla swoich danych.",
+                "Przewodnik krok po kroku – jak wybrać najlepszy wykres dla konkretnego zestawu danych.",
+            icon: <LineChart className="w-5 h-5" />,
+          },
+          {
+            title: "DataViz Project",
+            href: "https://datavizproject.com/",
+            description:
+              "Interaktywny katalog typów wykresów z przykładami – idealny przy doborze wizualizacji.",
             icon: <LineChart className="w-5 h-5" />,
           },
         ],
@@ -262,14 +297,14 @@ const sections: NinjaSection[] = [
             title: "Deneb",
             href: "https://deneb-viz.github.io/",
             description:
-              "Wtyczka do Power BI, która pozwala tworzyć niestandardowe wizualizacje w języku Vega-Lite.",
+                  "Power BI plugin do budowania niestandardowych wizualizacji w Vega/Vega‑Lite – certyfikowany.", 
             icon: <Palette className="w-5 h-5" />,
           },
           {
             title: "ECharts + Streamlit",
             href: "https://echarts.streamlit.app/",
             description:
-              "Interaktywna galeria wykresów zbudowana w Pythonie przy użyciu biblioteki ECharts i frameworka Streamlit.",
+              "Interaktywna galeria wykresów zbudowana w Pythonie przy użyciu ECharts i Streamlit.",
             icon: <Palette className="w-5 h-5" />,
           },
           {
@@ -298,6 +333,13 @@ const sections: NinjaSection[] = [
               "Zbiór szablonów SVG (microcharts, infografiki, filtry, animacje) używanych w Power BI.",
             icon: <LineChart className="w-5 h-5" />,
           },
+          {
+            title: "PBI‑David Deneb Showcase",
+            href: "https://github.com/PBI-David/Deneb-Showcase",
+            description:
+              "Kolekcja zaawansowanych przykładów Vega/Vega‑Lite w Power BI – bubble charts, sankey, gantt, waffle i inne.",
+            icon: <Palette className="w-5 h-5" />,
+          },
         ],
       },
     ],
@@ -314,7 +356,7 @@ const sections: NinjaSection[] = [
           {
             title: "Upwork",
             href: "https://www.upwork.com/",
-            description: "Platforma do wyszukiwania projektów freelancerskich.",
+            description: "Największy globalny marketplace projektów dla freelancerów – IT, design, analiza danych.",
             icon: <Search className="w-5 h-5" />,
           },
           {
@@ -377,14 +419,14 @@ const sections: NinjaSection[] = [
           {
             title: "GitHub Copilot",
             href: "https://github.com/features/copilot/",
-            description: "Asystent kodowania AI od GitHub.",
+            description: "Asystent AI od GitHub – uzupełnianie i generowanie kodu, obsługujący wiele języków.",
             icon: <CodeXml className="w-5 h-5" />,
           },
           {
             title: "Google Gemini Code Assist",
             href: "https://ai.google.dev",
             description:
-              "Asystent kodowania Google do wspomagania kodowania w ponad 30 językach.",
+                      "Asystent od Google – generowanie i analiza kodu, z sugestiami opartymi o model Gemini.",
             icon: <CodeXml className="w-5 h-5" />,
           },
         ],
@@ -437,6 +479,13 @@ const sections: NinjaSection[] = [
             description: "Rodzina dużych modeli językowych typu open-source.",
             icon: <SearchCheck className="w-5 h-5" />,
           },
+          {
+          title: "Chatbot Arena",
+          href: "https://lmarena.ai/",
+          description:
+            "Platforma do porównywania chatbotów – ranking 170+ modeli (OpenAI, Gemini, Claude itp.).",
+          icon: <SearchCheck className="w-5 h-5" />,
+        },
         ],
       },
     ],
@@ -447,20 +496,20 @@ const sections: NinjaSection[] = [
     description: "", // Description removed
     subsections: [
       {
-        name: "Otwarte dane (rządowe np.)",
+        name: "Otwarte dane",
         description: "",
         links: [
           {
             title: "Kaggle",
             href: "https://www.kaggle.com/datasets",
-            description: "Duża baza danych do uczenia maszynowego i analizy.",
+            description:  "Bogata baza danych do ML i eksploracji – zarówno community datasets, jak i konkursowe zestawy.",
             icon: <Database className="w-5 h-5" />,
           },
           {
             title: "Google Public Datasets",
             href: "https://cloud.google.com/bigquery/public-data",
             description:
-              "Dostęp do publicznych zbiorów danych na Google Cloud.",
+                          "Publiczne zbiory danych dostępne przez BigQuery – od genomiki po ekonomię.",
             icon: <Database className="w-5 h-5" />,
           },
           {
@@ -475,13 +524,14 @@ const sections: NinjaSection[] = [
             description: "Oficjalne statystyki Unii Europejskiej.",
             icon: <Globe className="w-5 h-5" />,
           },
-        ],
-      },
-      {
-        name: "Zbiory do ćwiczeń",
-        description: "",
-        links: [
           {
+          title: "data.europa.eu",
+          href: "https://data.europa.eu/en",
+          description:
+            "Meta-katalog ponad 1,6 mln datasetów z UE i państw członkowskich.",
+          icon: <Globe className="w-5 h-5" />,
+        },
+        {
             title: "UCI Machine Learning Repository",
             href: "https://archive.ics.uci.edu/datasets",
             description: "Kolekcja baz danych do analizy maszynowej.",
@@ -694,19 +744,20 @@ export default function NinjaLinksPage() {
       {/* ---- HERO ---- */}
       <div className="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row md:items-start gap-8 md:gap-14">
         {/* Logo dodane obok tytułu */}
-        <img
-          src="logo_napis_bialy-01.png" // Ścieżka do przesłanego logo
-          alt="Ninja Data Logo"
-          className="h-16 w-auto mb-4 md:mb-0" // Dostosuj rozmiar w zależności od potrzeb
-          loading="eager" // Szybkie ładowanie logo
-        />
+        <a href="https://ninjadata.pl/">
+          <img
+            src="logo_napis_bialy-01.png" // Ścieżka do przesłanego logo
+            alt="Ninja Data Logo"
+            className="h-16 w-auto mb-4 md:mb-0" // Dostosuj rozmiar w zależności od potrzeb
+            loading="eager" // Szybkie ładowanie logo
+          />
+        </a>
         <h1 className="flex-1 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
           Ninja Tools Hub
         </h1>
         <p className="flex-1 text-neutral-400 text-lg md:text-xl max-w-xl">
-          Zebrane najlepsze linki, które uproszczą Twoją pracę analityczną.
-          Jedno miejsce – setki sprawdzonych narzędzi, dokumentacji i
-          inspiracji.
+          Ninja Tools Hub to przegląd wyselekcjonowanych narzędzi dla osób pracujących z danymi.
+          Zawiera sprawdzone linki do źródeł, które przyspieszają analizę, ułatwiają wizualizację i wspierają naukę – wszystko zebrane w jednym miejscu.
         </p>
       </div>
 
