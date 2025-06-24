@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState} from "react"; 
 import { Card, CardContent } from "@/components/card";
 import {
   BarChart2,
@@ -32,6 +32,16 @@ import {
   Inspect, // New icon for Analiza danych i eksploracja
   Sparkles, // New icon for Uczenie maszynowe i predykcje
   ScatterChart, // New icon for Wizualizacja danych w Pythonie
+  Workflow, 
+  Users,
+  Server, 
+  BarChart, 
+  Network, 
+  ShieldCheck, 
+  Cloud, 
+  LineChartIcon, 
+  HeartPulse, 
+  Baby
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -182,9 +192,9 @@ const sections: NinjaSection[] = [
           },
           {
             title: "ALM Toolkit",
-            href: "https://alm-toolkit.com/",
+            href: "https://github.com/microsoft/Analysis-Services/releases",
             description:
-              "Porównuje i synchronizuje modele Tabular – przydatny przy wersjonowaniu miar i zmianach w modelu.",
+              "Porównuje i synchronizuje modele – przydatny przy wersjonowaniu i zmianach w modelu.",
             icon: <ExternalLink />,
           },
         ],
@@ -328,7 +338,7 @@ const sections: NinjaSection[] = [
           },
           {
             title: "SVG Templates by Kerry Kolosko",
-            href: "kerrykolosko.com/category/dataviz/svg/",
+            href: "https://kerrykolosko.com/",
             description:
               "Zbiór szablonów SVG (microcharts, infografiki, filtry, animacje) używanych w Power BI.",
             icon: <LineChart className="w-5 h-5" />,
@@ -373,6 +383,41 @@ const sections: NinjaSection[] = [
             icon: <Search className="w-5 h-5" />,
           },
           {
+            title: "No Fluff Jobs",
+            href: "https://nofluffjobs.com/pl/",
+            description:
+              "Oferty pracy IT z konkretnymi widełkami wynagrodzenia.",
+            icon: <Search className="w-5 h-5" />,
+          },
+          {
+            title: "Rocket Jobs",
+            href: "https://rocketjobs.pl/",
+            description:
+              "Nowoczesna platforma z ofertami z obszaru digital, IT, marketingu i analityki.",
+            icon: <Search className="w-5 h-5" />,
+          },
+          {
+            title: "Just Join IT",
+            href: "https://justjoin.it/",
+            description:
+              "Popularny job board dla specjalistów IT i analityków danych.",
+            icon: <Search className="w-5 h-5" />,
+          },
+          {
+            title: "Bulldogjob",
+            href: "https://bulldogjob.pl/",
+            description:
+              "Oferty pracy w IT i dane o technologiach firm.",
+            icon: <Search className="w-5 h-5" />,
+          },
+          {
+            title: "The Protocol",
+            href: "https://theprotocol.it/",
+            description:
+              "Serwis z ogłoszeniami dla specjalistów IT i data. Minimum marketingu, maksimum konkretów.",
+            icon: <Search className="w-5 h-5" />,
+          },
+          {
             title: "LinkedIn Jobs",
             href: "https://www.linkedin.com/jobs/",
             description: "Oferty pracy z całego świata.",
@@ -401,6 +446,13 @@ const sections: NinjaSection[] = [
             title: "Resume.io",
             href: "https://resume.io/",
             description: "Online'owy kreator CV z szablonami.",
+            icon: <ScrollText className="w-5 h-5" />,
+          },
+          {
+            title: "FlowCV",
+            href: "https://flowcv.com/",
+            description:
+              "Intuicyjny kreator CV – profesjonalne szablony, pełna personalizacja.",
             icon: <ScrollText className="w-5 h-5" />,
           },
         ],
@@ -549,12 +601,85 @@ const sections: NinjaSection[] = [
             description: "Wyselekcjonowana lista publicznych zbiorów danych.",
             icon: <BookCopy className="w-5 h-5" />,
           },
+          {
+            title: "World Bank Data",
+            href: "https://data.worldbank.org/",
+            description: "Globalne dane ekonomiczne i społeczne wg krajów i sektorów.",
+            icon: <Globe className="w-5 h-5" />,
+          },
+          {
+            title: "data.world",
+            href: "https://data.world/",
+            description:
+              "Społecznościowa platforma do dzielenia się zbiorami danych i analiz.",
+            icon: <Users className="w-5 h-5" />,
+          },
+          {
+            title: "Datahub.io",
+            href: "https://datahub.io/collections",
+            description:
+              "Kuratorowane zbiory danych z ekonomii, zdrowia, środowiska i więcej.",
+            icon: <Server className="w-5 h-5" />,
+          },
+          {
+            title: "Pew Research Datasets",
+            href: "https://www.pewresearch.org/datasets/",
+            description:
+              "Zbiory danych z badań opinii i trendów społecznych w USA i na świecie.",
+            icon: <BarChart className="w-5 h-5" />,
+          },
+          {
+            title: "Academic Torrents",
+            href: "https://academictorrents.com/",
+            description:
+              "Zdecentralizowane udostępnianie dużych zbiorów danych naukowych.",
+            icon: <Network className="w-5 h-5" />,
+          },
+          {
+            title: "Humanitarian Data Exchange",
+            href: "https://data.humdata.org/dataset",
+            description:
+              "Otwarte dane humanitarne – populacje, kryzysy, dostępność zasobów.",
+            icon: <ShieldCheck className="w-5 h-5" />,
+          },
+          {
+            title: "FiveThirtyEight Datasets",
+            href: "https://data.fivethirtyeight.com/",
+            description: "Zbiory danych wykorzystywane w analizach redakcyjnych 538.",
+            icon: <BarChart className="w-5 h-5" />,
+          },
+          {
+            title: "AWS Open Data Registry",
+            href: "https://registry.opendata.aws/",
+            description:
+              "Publiczne dane hostowane w AWS – geospacja, genomika, ML, klimat.",
+            icon: <Cloud className="w-5 h-5" />,
+          },
+          {
+            title: "NASDAQ Data Link",
+            href: "https://data.nasdaq.com/search",
+            description: "Dane finansowe, rynkowe i makroekonomiczne od Nasdaq.",
+            icon: <LineChartIcon className="w-5 h-5" />,
+          },
+          {
+            title: "WHO Global Health Observatory",
+            href: "https://www.who.int/data/gho/",
+            description:
+              "Dane Światowej Organizacji Zdrowia – zdrowie globalne, choroby, szczepienia.",
+            icon: <HeartPulse className="w-5 h-5" />,
+          },
+          {
+            title: "UNICEF Datasets",
+            href: "https://data.unicef.org/resources/resource-type/datasets/",
+            description: "Otwarte dane UNICEF o edukacji, zdrowiu, demografii dzieci.",
+            icon: <Baby className="w-5 h-5" />,
+          },
         ],
       },
     ],
   },
   {
-    name: "Python & Data Science",
+    name: "Python & Automatyzacja",
     icon: <BookOpen className="w-4 h-4 mr-2" />,
     description: "", // Description removed
     subsections: [
@@ -645,12 +770,25 @@ const sections: NinjaSection[] = [
           },
         ],
       },
+      {
+        name: "Automatyzacje i workflowy danych",
+        description: "",
+        links: [
+          {
+            title: "n8n",
+            href: "https://n8n.io/",
+            description:
+              "Open‑source’owe narzędzie low‑code do tworzenia workflowów i integracji danych – 400+ konektorów, obsługa Pythona i AI.",
+             icon: <Workflow className="w-5 h-5" />,
+          },
+        ],
+      }
     ],
   },
   {
     name: "Produktywność",
     icon: <Clock className="w-4 h-4 mr-2" />,
-    description: "", // Description removed
+    description: "",
     subsections: [
       {
         name: "Zarządzanie czasem",
@@ -673,7 +811,7 @@ const sections: NinjaSection[] = [
         ],
       },
       {
-        name: "Zarządzanie zadaniami", // Renamed
+        name: "Zarządzanie zadaniami",
         description: "",
         links: [
           {
@@ -719,6 +857,7 @@ export default function NinjaLinksPage() {
   const [activeSection, setActiveSection] = useState("Power BI & DAX");
   const current = sections.find((s) => s.name === activeSection);
 
+
   /* ---------- Zakładki ---------- */
   const Tabs = () => (
     <div className="flex flex-wrap justify-center gap-6 mb-14 border-b border-white/10">
@@ -741,24 +880,77 @@ export default function NinjaLinksPage() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 py-16 px-4 sm:px-10">
-      {/* ---- HERO ---- */}
-      <div className="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row md:items-start gap-8 md:gap-14">
-        {/* Logo dodane obok tytułu */}
-        <a href="https://ninjadata.pl/">
+      {/* ---- HERO SECTION: Logo, Title, Description ---- */}
+      <div className="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-14">
+        {/* Logo (Left Column on larger screens) */}
+        <a href="https://ninjadata.pl/" className="mb-4 md:mb-0">
           <img
-            src="logo_napis_bialy-01.png" // Ścieżka do przesłanego logo
+             src="logo_napis_bialy-01.png" 
             alt="Ninja Data Logo"
-            className="h-16 w-auto mb-4 md:mb-0" // Dostosuj rozmiar w zależności od potrzeb
-            loading="eager" // Szybkie ładowanie logo
+            className="h-16 w-auto" // Adjust size as needed
+            loading="eager" // Fast loading logo
           />
         </a>
-        <h1 className="flex-1 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
-          Ninja Tools Hub
-        </h1>
-        <p className="flex-1 text-neutral-400 text-lg md:text-xl max-w-xl">
-          Ninja Tools Hub to przegląd wyselekcjonowanych narzędzi dla osób pracujących z danymi.
-          Zawiera sprawdzone linki do źródeł, które przyspieszają analizę, ułatwiają wizualizację i wspierają naukę – wszystko zebrane w jednym miejscu.
-        </p>
+
+        {/* Title and Description (Middle Column on larger screens) */}
+        <div className="flex flex-col gap-4 flex-1 min-w-0"> {/* min-w-0 added for better flex behavior */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
+            Ninja Tools Hub
+          </h1>
+          <p className="text-neutral-400 text-lg md:text-xl max-w-xl">
+            Przegląd wyselekcjonowanych narzędzi dla osób pracujących z danymi.
+            Zawiera linki do źródeł, które przyspieszają analizę, ułatwiają wizualizację i wspierają naukę.
+          </p>
+        </div>
+
+        {/* Social Media Icons and Suggest Button (Right Column on larger screens) */}
+        <div className="flex flex-col items-center justify-start gap-4 mt-8 md:mt-0">
+            {/* Social Media Icons (smaller) */}
+            <div className="flex justify-center space-x-4">
+                {/* Ikona Instagram */}
+                <a href="https://www.instagram.com/ninja_data/" target="_blank" rel="noopener noreferrer"
+                   className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 text-white text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 ease-in-out"
+                   aria-label="Instagram">
+                    <i className="fab fa-instagram"></i>
+                </a>
+
+                {/* Ikona LinkedIn */}
+                <a href="https://www.linkedin.com/in/katarzyna-p%C4%99sik/" target="_blank" rel="noopener noreferrer"
+                   className="flex items-center justify-center w-10 h-10 bg-blue-700 text-white text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 ease-in-out"
+                   aria-label="LinkedIn">
+                    <i className="fab fa-linkedin-in"></i>
+                </a>
+
+                {/* Ikona Facebook */}
+                <a href="https://www.facebook.com/share/1C4TtExaP2/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+                   className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 ease-in-out"
+                   aria-label="Facebook">
+                    <i className="fab fa-facebook-f"></i>
+                </a>
+
+                {/* Ikona YouTube */}
+                <a href="https://www.youtube.com/@ninjadatayt" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center justify-center w-10 h-10 bg-red-600 text-white text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 ease-in-out"
+                  aria-label="YouTube">
+                    <i className="fab fa-youtube"></i>
+                </a>
+
+
+                {/* Ikona strony internetowej */}
+                <a href="https://www.ninjadata.pl/" target="_blank" rel="noopener noreferrer"
+                   className="flex items-center justify-center w-10 h-10 bg-gray-700 text-white text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 ease-in-out"
+                   aria-label="Strona internetowa">
+                    <i className="fas fa-globe"></i>
+                </a>
+            </div>
+
+            {/* New Suggest Tool Button */}
+            <a href="https://www.ninjadata.pl/nowe-narzedzia" target="_blank" rel="noopener noreferrer"
+               className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-full shadow-lg hover:bg-purple-700 transform hover:scale-105 transition-all duration-300 ease-in-out"
+               aria-label="Zgłoś nowe narzędzie">
+                Zgłoś nowe narzędzie <ExternalLink className="ml-2 w-5 h-5" />
+            </a>
+        </div>
       </div>
 
       <Tabs />
